@@ -7,11 +7,7 @@ int main()
 	int i;
 	position=0;
 	printf("\e[2J\e[H");
-	//printf("\n\n\n\n");
 	printf("Would you like to:\n    1)Read the rules\n    2)Play the game\n\n");
-
-	//srand(time(NULL));
-	//	scanf("%d", &choice);
 	choice =1;
 
 	if (choice==1)
@@ -32,17 +28,15 @@ int main()
 		printf("32  31  30  29  28  27  26  25        14=Ladder to 43    49=Snake  to 32\n");
 		printf("17  18  19  20  21  22  23  24        17=Snake  to 13    63=Snake  to 2\n");
 		printf("16  15  14  13  12  11  10   9        21=Snake  to 3     64=End\n");
-		printf(" 1   2   3   4   5   6   7   8        24=Ladder to 58\n");                       /*Prints the board for user's reference*/
-
+		printf(" 1   2   3   4   5   6   7   8        24=Ladder to 58\n");                      
 
 		do
 		{
 
-			unsigned lsb = lfsr & 1;  /* Get lsb (i.e., the output bit). */
-			lfsr >>= 1;               /* Shift register */
-			if (lsb == 1)             /* Only apply toggle mask if output bit is 1. */
-				lfsr ^= 0xB400u;        /* Apply toggle mask, value has 1 at bits corresponding
-							 * to taps, 0 elsewhere. */
+			unsigned lsb = lfsr & 1;  
+			lfsr >>= 1;               
+			if (lsb == 1)             
+				lfsr ^= 0xB400u;        
 			++period;
 
 			printf("\e[2J\e[H");
@@ -51,7 +45,7 @@ int main()
 			getchar();
 
 			dice=((lfsr%6)+1);
-			//			printf("\nYou have rolled a %d.", dice);
+					
 
 
 			position+=dice;
@@ -68,12 +62,6 @@ int main()
 			printf("You have rolled a %d.", dice);
 			display_square(position);
 
-			//			printf(" Press a key to check your Luck...\n");
-			//			getchar();
-
-			//			printf("\e[2J\e[H");
-			//			printf("Checking you Luck...\n");
-			//			printf("Checking you Luck...\n");
 
 			checkposition();
 			//write a rotating program here
