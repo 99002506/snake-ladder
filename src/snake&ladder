@@ -1,0 +1,72 @@
+#include <snake&ladder.h>
+int getchar()
+{
+	return a0;
+}
+void display_square(int position)
+{
+a[position]=0x20;
+}
+checkposition()
+{    
+	switch(position)
+	{
+		case 4:
+			return newposition = 35;
+			break;
+
+		case 7:
+			return newposition = 23;
+			break;
+
+		case 9:
+			return newposition =5;
+			break;
+
+		case 14:
+			return newposition =43;
+			break;
+
+		case 17:
+			return newposition =13;
+			break;
+
+		case 21:
+			return newposition =3;
+			break;
+
+		case 24:
+			return newposition =58;
+			break;
+
+		case 27:
+			return newposition =37;
+			break;
+
+		case 34:
+			return newposition =20;
+			break;
+
+		case 42:
+			return newposition =11;
+			break;
+
+		case 46:
+			return newposition =53;
+			break;
+
+		case 49:
+			return newposition =32;
+			break;
+
+		case 63:
+			return newposition =2;
+			break;
+
+		default:
+			return newposition = position;
+	}
+
+
+}
+
